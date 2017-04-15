@@ -54,26 +54,26 @@ class BPEL_List_Records extends WP_List_Table {
 		                         ) );
 		?>
 
-        <ul class="subsubsub">
-            <li class="all">
-                <a href="<?php echo add_query_arg( 'post_status', false, $link ); ?>" <?php echo $status == 'all' ? 'class="current"' : ''; ?>>
+		<ul class="subsubsub">
+			<li class="all">
+				<a href="<?php echo add_query_arg( 'post_status', false, $link ); ?>" <?php echo $status == 'all' ? 'class="current"' : ''; ?>>
 					<?php _e( 'All', BPEL_I18N ); ?>
-                    <span class="count">(<?php echo $this->get_items_count( 'all' ); ?>)</span>
-                </a> |
-            </li>
-            <li class="success">
-                <a href="<?php echo add_query_arg( 'post_status', 'success', $link ); ?>" <?php echo $status == 'success' ? 'class="current"' : ''; ?>>
+					<span class="count">(<?php echo $this->get_items_count( 'all' ); ?>)</span>
+				</a> |
+			</li>
+			<li class="success">
+				<a href="<?php echo add_query_arg( 'post_status', 'success', $link ); ?>" <?php echo $status == 'success' ? 'class="current"' : ''; ?>>
 					<?php _e( 'Success', BPEL_I18N ); ?>
-                    <span class="count">(<?php echo $this->get_items_count( 'success' ); ?>)</span>
-                </a> |
-            </li>
-            <li class="failure">
-                <a href="<?php echo add_query_arg( 'post_status', 'failure', $link ); ?>" <?php echo $status == 'failure' ? 'class="current"' : ''; ?>>
+					<span class="count">(<?php echo $this->get_items_count( 'success' ); ?>)</span>
+				</a> |
+			</li>
+			<li class="failure">
+				<a href="<?php echo add_query_arg( 'post_status', 'failure', $link ); ?>" <?php echo $status == 'failure' ? 'class="current"' : ''; ?>>
 					<?php _e( 'Failure', BPEL_I18N ); ?>
-                    <span class="count">(<?php echo $this->get_items_count( 'failure' ); ?>)</span>
-                </a>
-            </li>
-        </ul>
+					<span class="count">(<?php echo $this->get_items_count( 'failure' ); ?>)</span>
+				</a>
+			</li>
+		</ul>
 
 		<?php
 	}

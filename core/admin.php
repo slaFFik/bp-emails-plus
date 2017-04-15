@@ -28,21 +28,21 @@ function bpel_admin_page() {
 
 	?>
 
-    <div class="wrap">
-        <h1><?php _e( 'BuddyPress Sent Emails Log', BPEL_I18N ); ?></h1>
+	<div class="wrap">
+		<h1><?php _e( 'BuddyPress Sent Emails Log', BPEL_I18N ); ?></h1>
 
-        <p class="description"><?php _e( 'Click on an email title in a table to preview, what exactly was sent to a user. Users names are linked directly to BuddyPress profiles.', BPEL_I18N ); ?></p>
+		<p class="description"><?php _e( 'Click on an email title in a table to preview, what exactly was sent to a user. Users names are linked directly to BuddyPress profiles.', BPEL_I18N ); ?></p>
 
-        <form id="bp-emails-records" method="get">
-            <!-- Ensure that the form posts back to our current page -->
-            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>"/>
+		<form id="bp-emails-records" method="get">
+			<!-- Ensure that the form posts back to our current page -->
+			<input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>"/>
 
-            <p class="search-box"><?php $list->search_box( __( 'Search', BPEL_I18N ), 'bp-emails-records' ); ?></p>
+			<p class="search-box"><?php $list->search_box( __( 'Search', BPEL_I18N ), 'bp-emails-records' ); ?></p>
 
 			<?php $list->display(); ?>
-        </form>
+		</form>
 
-    </div>
+	</div>
 
 	<?php
 }
